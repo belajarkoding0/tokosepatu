@@ -44,9 +44,10 @@
 	</div>
 	<hr>
 	<h3 class="tengah tebal">LAPORAN DATA TRANSAKSI HARIAN OPLSHOP</h3><br>
-	<div>
+	<!-- <div>
 		<button onclick="window.print()">Cetak</button>
-	</div>
+	</div> -->
+	<div class="container">
 	<?php
 	if (isset($_POST['cari'])) {
 		$tanggalawal = date('Y-m-d',strtotime($_POST["tanggalawal"]));
@@ -77,6 +78,7 @@
 			</tbody>
 		</table>
 	<?php } ?>
+	</div>
 	<div class="tengah">
 		Dicetak pada : <?= date('d-m-Y H:i:s'); ?><br>
 		Oleh : <?= $user; ?>

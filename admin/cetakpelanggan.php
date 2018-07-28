@@ -47,35 +47,35 @@
 		<button onclick="window.print()">Cetak</button>
 	</div> -->
 	<div class="container">
-	<table class="table table-bordered" id="dataTables-example">
-		<thead>
-			<tr>
-				<th class="tengah">No</th>
-				<th class="tengah">No. ID</th>
-				<th class="tengah">Nama Lengkap</th>
-				<th class="tengah">Jenis Kelamin</th>
-				<th class="tengah">Tanggal Lahir</th>
-				<th class="tengah">No. Telepon</th>
-				<th class="tengah">E-mail</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php include '../conf/koneksi.php'; $nomor = 1 ?>
-			<?php $query = mysqli_query($con, "SELECT * FROM pelanggan"); ?>
-			<?php while ( $ambil = mysqli_fetch_assoc($query)) { ?>
-			<tr>
-				<td class="tengah"><?php echo $nomor; ?></td>
-				<td class="tengah"><?php echo $ambil['id_pelanggan']; ?></td>
-				<td class="tengah"><?php echo $ambil['nama_pelanggan']; ?></td>
-				<td class="tengah"><?php echo $ambil['jenis_kelamin']; ?></td>
-				<td class="tengah"><?php echo date('d-m-Y',strtotime($ambil['tgl_lahir'])); ?></td>
-				<td class="tengah"><?php echo $ambil['no_telepon']; ?></td>
-				<td class="tengah"><?php echo $ambil['email']; ?></td>
-			</tr>
-			<?php $nomor++ ?>
-			<?php } ?>
-		</tbody>
-	</table>
+		<table class="table table-bordered" id="dataTables-example">
+			<thead>
+				<tr>
+					<th class="tengah">No</th>
+					<th class="tengah">No. ID</th>
+					<th class="tengah">Nama Lengkap</th>
+					<th class="tengah">Jenis Kelamin</th>
+					<th class="tengah">Tanggal Lahir</th>
+					<th class="tengah">No. Telepon</th>
+					<th class="tengah">E-mail</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php include '../conf/koneksi.php'; $nomor = 1 ?>
+				<?php $query = mysqli_query($con, "SELECT * FROM pelanggan"); ?>
+				<?php while ( $ambil = mysqli_fetch_assoc($query)) { ?>
+				<tr>
+					<td class="tengah"><?php echo $nomor; ?></td>
+					<td class="tengah"><?php echo $ambil['id_pelanggan']; ?></td>
+					<td class="tengah"><?php echo $ambil['nama_pelanggan']; ?></td>
+					<td class="tengah"><?php echo $ambil['jenis_kelamin']; ?></td>
+					<td class="tengah"><?php echo date('d-m-Y',strtotime($ambil['tgl_lahir'])); ?></td>
+					<td class="tengah"><?php echo $ambil['no_telepon']; ?></td>
+					<td class="tengah"><?php echo $ambil['email']; ?></td>
+				</tr>
+				<?php $nomor++ ?>
+				<?php } ?>
+			</tbody>
+		</table>
 	</div>
 	<div class="tengah">
 		Dicetak pada : <?= date('d-m-Y H:i:s'); ?><br>
