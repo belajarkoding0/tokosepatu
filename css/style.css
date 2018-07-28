@@ -1,0 +1,167 @@
+html,body{
+    height:100%;
+    margin-top: 30px;
+}
+
+span.errors{
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
+
+.kanan{
+  text-align: right;
+}
+
+.kiri{
+  text-align: left;
+}
+
+.tengah{
+  text-align: center;
+}
+.tebal{
+  font-weight: bold;
+}
+
+#container{
+  min-height:100%;
+  position:relative;
+}
+
+#content{
+  /* padding:10px; */
+  padding-bottom: 60px; /*sama atau lebih besar dari tinggi footer*/
+}
+#footer{
+  position:absolute;
+  bottom:0px;
+  height: 50px;
+  line-height:50px;
+  background:#fff;
+  color:#fff;
+  width:100%; /*biar memenuhi layar*/
+}
+
+h1{
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h3{
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4{
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h5{
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(10, 10, 10);
+}
+
+a:hover, a:visited, a:link, a:active
+{
+  text-decoration: none;
+}
+
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.thumbnail .caption{
+    color: #D9230F;
+}
+
+.thumbnail{
+    box-shadow: 10px 10px 10px -10px;
+}
+
+.thumbnail .caption .nama_barang{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+}
+
+
+.thumbnail .caption .harga{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container .nama_barang,
+.container .harga{
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #D9230F;
+
+}
+
+.container .nama_barang{
+  font-size: 24px;
+
+}
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 0;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 0 0;
+}
