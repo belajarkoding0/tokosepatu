@@ -183,8 +183,6 @@
       <script src="assets/js/jquery.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
       <script src="assets/js/bootstrap.min.js"></script>
-      <!-- METISMENU SCRIPTS -->
-      <script src="assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
       <script src="assets/js/dataTables/jquery.dataTables.js"></script>
       <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
