@@ -61,12 +61,9 @@
                       <a class="btn btn-success btn-xs" disabled >Konfirmasi</a>
                       <a class="btn btn-danger btn-xs" disabled >Batal</a>
                       <?php else: ?>
-                      <!-- <a class="btn btn-success btn-xs" href="konfirmasi.php?id=<?=$resultTransaksi['id_transaksi'] ?>">Konfirmasi</a> -->
                       <a class="btn btn-success btn-xs" data-toggle="modal" data-target="#konf_<?=$resultTransaksi['id_transaksi'] ?>">Konfirmasi</a>
-                      <!-- <a class="btn btn-danger btn-xs" href="proses_batal.php?id=<?=$resultTransaksi['id_transaksi'] ?>">Batal</a> -->
                       <a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#batal_<?=$resultTransaksi['id_transaksi'] ?>">Batal</a>
                     <?php endif ?>
-                    
                   </td>
                 </tr>
                 <div class="modal fade" id="konf_<?=$resultTransaksi['id_transaksi'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -102,14 +99,11 @@
                             <input type="file" id="gambar" name="gambar" required class="form-control">
                             <span><em>catatan : max size 2MB</em></span>
                           </div>
-                          <!-- <div class="form-group">
-                            <button class="btn btn-primary" type="submit" name="submit">Simpan</button>
-                          </div> -->
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                             <button class="btn btn-success" type="submit" name="upload">Simpan</button>
                           </div>
-                        </form>  
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -132,7 +126,7 @@
                             <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Tutup</button>
                             <button class="btn btn-sm btn-success" type="submit" name="batal">Simpan</button>
                           </div>
-                        </form>  
+                        </form>
                       </div>
                     </div>
                   </div>

@@ -17,7 +17,7 @@
     CURLOPT_POSTFIELDS => "origin=".$asal."&destination=".$id_kabupaten."&weight=".$berat."&courier=".$kurir."",
     CURLOPT_HTTPHEADER => array(
       "content-type: application/x-www-form-urlencoded",
-      "key: 77cda9b64f2a6060b77274b1ac47aab1"
+      "key: 7445298c644e837530aad1a5b2638f15"
     ),
   ));
 

@@ -47,7 +47,15 @@
       	case '12': $bulanx = "Desember"; break;
       }
     ?>
-    <h1>Detail Transaksi</h1><hr>
+    <div class="col col-md-12">
+      <div class="col col-md-6">
+        <h1>Detail Transaksi</h1>
+      </div>
+      <div class="col col-md-6 kanan" style="margin: 20px 0 10px 0;">
+        <p> <a href="invoice.php?id=<?=$resultInv['id_transaksi']?>"> <img src="img/cetak.png" alt="" width=5%> </a> Cetak</p>
+      </div>
+    </div>
+    <hr>
     <div class="col col-md-4">
       <h3>Transaksi</h3>
       <table>

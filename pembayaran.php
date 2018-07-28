@@ -128,12 +128,12 @@
           <th colspan="4" class="kanan">Biaya Kirim</th>
           <td class="kanan">Rp <?= number_format($resultInv['ongkir']); ?></td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th colspan="4" class="kanan">Kode unik</th>
-          <td class="kanan"><?= $kodeunik ?></td>
-        </tr>
+          <td class="kanan"></?= $kodeunik ?></td>
+        </tr> -->
         <tr>
-          <?php $subtotal = $resultInv['subtotal'] + $kodeunik ?>
+          <?php $subtotal = $resultInv['subtotal'] ?>
           <th colspan="4" class="kanan">Subtotal</th>
           <td class="kanan">Rp. <?= number_format($subtotal) ?></td>
         </tr>

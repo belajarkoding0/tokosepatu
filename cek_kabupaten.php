@@ -12,7 +12,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "key: 77cda9b64f2a6060b77274b1ac47aab1"
+    "key: 7445298c644e837530aad1a5b2638f15"
   ),
 ));
 
@@ -29,7 +29,7 @@ if ($err) {
 
 $data = json_decode($response, true);
 echo "<option value=''>-- Pilih Kab/Kota Tujuan --</option>";
-for ($i=0; $i < count($data['rajaongkir']['results']); $i++) { 
+for ($i=0; $i < count($data['rajaongkir']['results']); $i++) {
     echo "<option value='".$data['rajaongkir']['results'][$i]['city_id']."'>".strtoupper($data['rajaongkir']['results'][$i]['city_name'])."</option>";
 }
 

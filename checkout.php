@@ -76,7 +76,7 @@ while ( $result = mysqli_fetch_assoc($query)) {
 					  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 					  CURLOPT_CUSTOMREQUEST => "GET",
 					  CURLOPT_HTTPHEADER => array(
-					    "key: 77cda9b64f2a6060b77274b1ac47aab1"
+					    "key: 7445298c644e837530aad1a5b2638f15"
 					  ),
 					));
 
@@ -106,7 +106,7 @@ while ( $result = mysqli_fetch_assoc($query)) {
 					  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 					  CURLOPT_CUSTOMREQUEST => "GET",
 					  CURLOPT_HTTPHEADER => array(
-					    "key: 77cda9b64f2a6060b77274b1ac47aab1"
+					    "key: 7445298c644e837530aad1a5b2638f15"
 					  ),
 					));
 
@@ -194,7 +194,7 @@ while ( $result = mysqli_fetch_assoc($query)) {
 	$telepon = $_POST['telepon'];
 	$pos = $_POST['pos'];
 	$alamat = $_POST['alamat'];
-	
+
 	$simpanTrans = mysqli_query($con, "INSERT INTO transaksi (id_transaksi, id_pelanggan, tgl_transaksi, subtotal, nm_penerima, no_tlp, alamat_pengiriman, kota, kode_pos, provinsi, kurir, service, ongkir, status, resi) VALUES ('$id_transaksi','$id_pelanggan','$tanggal','$subtotal','$nama','$telepon','$alamat','$kota','$pos','$prov','$kurir','$service','$tarif','1','')");
 	// if ()
 	// {
