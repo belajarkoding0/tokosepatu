@@ -89,7 +89,7 @@ if (isset($_POST['simpan'])):
 	echo "<script>alert('Data Tidak Boleh Kosong');</script>";
 	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=tambahbarang'>";
 	}else {
-	
+
 	/*AMBIL TMP_BRG BUAT DISIMPAN KE STOK*/
 	$ambilTmp = mysqli_query($con,"SELECT * FROM tmp_brg");
 	$test = mysqli_num_rows($ambilTmp) > 0;
