@@ -15,7 +15,7 @@
   <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 	<style>
 	body{
-		width: 70%;
+		width: 100%;
 		margin: 0 auto;
 
 	}
@@ -43,9 +43,10 @@
 	</div>
 	<hr>
 	<h3 class="tengah tebal">LAPORAN DATA PELANGGAN OPLSHOP</h3><br>
-	<div>
+	<!-- <div>
 		<button onclick="window.print()">Cetak</button>
-	</div>
+	</div> -->
+	<div class="container">
 	<table class="table table-bordered" id="dataTables-example">
 		<thead>
 			<tr>
@@ -75,6 +76,7 @@
 			<?php } ?>
 		</tbody>
 	</table>
+	</div>
 	<div class="tengah">
 		Dicetak pada : <?= date('d-m-Y H:i:s'); ?><br>
 		Oleh : <?= $user; ?>
