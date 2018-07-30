@@ -56,7 +56,7 @@
                   <td class="tengah"><?= $status ?></td>
                   <td class="tengah"><?= $resultTransaksi['resi'] ?></td>
                   <td class="tengah">
-                    <a class="btn btn-info btn-xs" href="detail.php?id=<?=$resultTransaksi['id_transaksi'] ?>">Detail</a>
+                    <a class="btn btn-info btn-xs" href="invoice.php?id=<?=$resultTransaksi['id_transaksi'] ?>">Detail</a>
                     <?php $i=1; if ($resultTransaksi['status'] < $i OR $resultTransaksi['status'] > $i): ?>
                       <a class="btn btn-success btn-xs" disabled >Konfirmasi</a>
                       <a class="btn btn-danger btn-xs" disabled >Batal</a>
