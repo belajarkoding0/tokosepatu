@@ -1,12 +1,11 @@
 <?php session_start(); ?>
 <?php $user = $_SESSION['admin']['username']; ?>
-<?php $tanggalawal = date('Y-m-d',strtotime($_POST["tanggalawal"]));
-		$tanggalakhir = date('Y-m-d',strtotime($_POST["tanggalakhir"])); ?>
+<?php include '../conf/koneksi.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cetak Laporan Transaksi Harian</title>
+	<title>Cetak Laporan Transaksi Bulanan</title>
 	<link href="assets/css/bootstrap.css" rel="stylesheet" />
   <!-- FONTAWESOME STYLES-->
   <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -44,14 +43,14 @@
 		<p class="tebal">Telepon : (021) 3915957</p>
 	</div>
 	<hr>
-	<h3 class="tengah tebal">LAPORAN DATA TRANSAKSI HARIAN OPLSHOP</h3><br>
-	<p class="tengah">Periode : <?php echo date('d-m-Y', strtotime($tanggalawal)) .' - '. date('d-m-Y', strtotime($tanggalakhir)) ?></p>
+	<h3 class="tengah tebal">LAPORAN DATA TRANSAKSI BULANAN OPLSHOP</h3><br>
 	<!-- <div>
 		<button onclick="window.print()">Cetak</button>
 	</div> -->
 	<div class="container">
 	<?php
-	if (isset($_POST['cari'])) { ?>
+	if (isset($_POST['cari'])) {
+  ?>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -63,8 +62,8 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php include '../conf/koneksi.php';$nomor = 1 ?>
-				<?php $query = mysqli_query($con, "SELECT * FROM transaksi JOIN pelanggan ON transaksi.id_pelanggan = pelanggan.id_pelanggan WHERE transaksi.tgl_transaksi BETWEEN '$tanggalawal' AND '$tanggalakhir' ORDER BY tgl_transaksi DESC"); ?>
+				<?php $nomor = 1; $bulan = $_POST["bulan"];?>
+				<?php $query = mysqli_query($con, "SELECT * FROM transaksi JOIN pelanggan ON transaksi.id_pelanggan = pelanggan.id_pelanggan WHERE MONTH(transaksi.tgl_transaksi)='$bulan' ORDER BY tgl_transaksi DESC"); ?>
 				<?php while ($ambil = mysqli_fetch_assoc($query)) { ?>
 				<tr>
 					<td class="tengah"><?php echo $nomor; ?></td>
