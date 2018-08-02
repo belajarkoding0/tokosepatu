@@ -61,7 +61,7 @@
 		  </div>
 		  <div class="tampildata"></div>
 		  <div class="form-group">
-		    <label for="gambar">File input</label>
+		    <label for="gambar">Gambar</label>
 		    <input type="file" id="gambar" name="gambar">
 		  </div>
 		  <div class="form-group">
@@ -83,7 +83,6 @@ if (isset($_POST['simpan'])):
 	$deskripsi = $_POST["deskripsi"];
 	$gambar = $_FILES['gambar']['name'];
 	$lokasi = $_FILES['gambar']['tmp_name'];
-	move_uploaded_file($lokasi, "../img/".$gambar);
 
 	if (empty($nama) || empty($kategori) || empty($jenis) || empty($harga) || empty($berat) || empty($gambar) || empty($deskripsi) ) {
 	echo "<script>alert('Data Tidak Boleh Kosong');</script>";
@@ -101,6 +100,7 @@ if (isset($_POST['simpan'])):
 			/*SIMPAN BARANG*/
 		$simpan = mysqli_query($con, "INSERT INTO barang (id_barang,nama_barang,id_kategori,id_jenis,harga,berat,gambar,deskripsi)
 		 	VALUES ('$idbarang','$nama','$kategori','$jenis','$harga','$berat','$gambar','$deskripsi')");
+		move_uploaded_file($lokasi, "../img/".$gambar);
 
 		/*SIMPAN STOK*/
 		$simpan = mysqli_query($con, "INSERT INTO stok (id_barang,ukuran,stok)
